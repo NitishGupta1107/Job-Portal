@@ -17,6 +17,12 @@ await connectDB();
 
 // Middlewares
 app.use(cors());
+
+app.use(
+  "/webhooks",
+  express.raw({ type: "application/json" })
+);
+
 app.use(express.json());
 
 // Routes
